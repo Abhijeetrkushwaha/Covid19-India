@@ -140,7 +140,7 @@ button{
 
 .chart{
     border-radius: 20px;
-    width: 30rem;
+    width: 28rem;
     height: 30rem;
     box-shadow: 0 0 20px rgb(0, 0, 0,.2);
     margin:1rem 0.5rem;
@@ -209,12 +209,8 @@ td{
      font-size: 1.7rem;
 }
  .div{
-    min-height: 80rem;
-}
-}
-@media (min-width:1024px){
-    .div{
     min-height: 40rem;
 }
 }
+
 
