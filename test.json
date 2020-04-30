@@ -1,0 +1,12 @@
+{
+    "success": true,
+    "data": {
+        "day": "2020-04-29",
+        "totalSamplesTested": 770764,
+        "totalIndividualsTested": null,
+        "totalPositiveCases": null,
+        "source": "https://www.icmr.gov.in/pdf/covid/update/ICMR_testing_update_29Apr2020_9AM_IST.pdf"
+    },
+    "lastRefreshed": "2020-04-29T07:20:01.381Z",
+    "lastOriginUpdate": "2020-04-29T15:30:00.000Z"
+}

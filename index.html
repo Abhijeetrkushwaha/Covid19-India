@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID19-INDIA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<ul class="nav-list">
+				<li><a href="#header">Home</a></li>
+				<li><a href="map.html">India-Map</a></li>
+				<li><a href="">Contacts & Helpline</a></li>
+			</ul>
+		</div>
+	</header>
+    <main>
+        <section class="hero" id="header">
+            <div class="container">
+                <h1>COVID19-INDIA</h1>
+        <div class="main-stats">
+            <div class="last-update">
+                <h3>Last-updated: <span class="update">---------------------</span></h3>
+            </div>
+            <div class="all-cases">
+                <div class="confirmed c"><h2>Confirmed</h2><p class="confirmed-no">-----</p></div>
+                <div class="Recovered c"><h2>Recovered</h2><p class="Recovered-no">-----</p></div>
+                <div class="Deceased c"><h2>Deceased</h2><p class="Deceased-no">-----</p></div>
+                <div class="Tested c"><h2>Sample Tested</h2><p class="Tested-no">-----</p></div>
+            </div>
+        </div>
+            </div>
+        </section>
+
+        <section class="table">
+           <div class="container">
+               <h3>State-Wise Statistics</h3>
+                <table>
+                    <tr class="color">
+                        <th>Sate/UT</th>
+                        <th class="c">Confirmed</th>
+                        <th class="r">Recovered</th>
+                        <th class="d">Deceased</th>
+                    </tr>
+                    <tbody class="my-table">
+                    </tbody>
+               </table>
+           </div>
+        </section>
+        <section class="charts">
+            <h3>Spread Trends</h3>
+          
+                <div class="button">
+                    <button class="btn-1 active">Cumulative</button>
+                    <button class="btn-2">Daily</button>
+                </div>
+                <div class="div">
+                    <div class="div1">
+                    <div class="div1-1 one chart"><canvas id="myChartTC" width="400" height="400" ></canvas></div>
+                    <div class="div1-2 two chart"><canvas id="myChartRC" width="400" height="400" ></canvas></div>
+                    <div class="div1-3 three chart"><canvas id="myChartDC" width="400" height="400" ></canvas></div>
+                </div>
+                <div class="div2">
+                     <div class="div2-1 one chart"><canvas id="myChartTD" width="400" height="400" ></canvas></div>
+                    <div class="div2-2 two chart"><canvas id="myChartRD" width="400" height="400" ></canvas></div>
+                    <div class="div2-3 three chart"><canvas id="myChartDD" width="400" height="400" ></canvas></div>
+                </div>
+                </div>
+            
+
+        </section>
+
+        
+
+    </main>
+     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

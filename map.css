@@ -1,0 +1,108 @@
+*,*::after,*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+p{
+    font-size: 1.6rem;
+}
+h1{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.3rem;
+}
+body{
+    background-color: #969696;
+}
+
+:root{
+    --red-color:red;
+    --green-color:green;
+    --gray-color:gray;
+    --blue-color:blue;
+}
+.main-heading{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.state{
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.all-cases{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid purple;
+    margin-bottom: 2rem;
+}
+.confirmed{
+    color: var(--red-color);
+}
+.Recovered{
+    color:var(--green-color);
+}
+.Deceased{
+    color: var(--gray-color);
+}
+.Tested{
+    color: var(--blue-color);
+}
+.color{
+    background-color: var(--gray-color);
+}
+.container1 {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+}
+.map-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid red;
+}
+
+svg {
+  padding: 1rem 1rem;
+}
+path {
+  fill: rgb(255, 156, 156);
+  stroke: black;
+  transition: 0.2s fill;
+}
+path:hover,
+path:focus {
+  fill: red;
+}
+.svg1 {
+  display: none;
+}
+.svg2 {
+  display: block;
+}
+@media (min-width: 650px) {
+  .svg1 {
+    display: block;
+  }
+  .svg2 {
+    display: none;
+  }
+  p{
+    font-size: 2rem;
+}
+h1{
+    font-size: 3rem;
+}
+h3{
+    font-size: 2rem;
+}
+}
