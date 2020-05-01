@@ -1,3 +1,4 @@
+/* Global styling */
 *,*::after,*::before{
     padding: 0;
     margin:0;
@@ -53,6 +54,7 @@ a{
     --gray-color:gray;
     --blue-color:blue;
 }
+/* body styling */
 .nav-list{
     height: 5rem;
     display: flex;
@@ -183,10 +185,17 @@ button{
 .three{
     background-color: rgb(189, 189, 189);
 }
+footer{
+    text-align: center;
+    padding: 1rem 0;
+    background-color: purple;
+}
 @media (min-width:768px) {
-
     .div{
     min-height: 70rem;
+}
+h4{
+    font-size: 1.5rem;
 }
 }
 @media (min-width:900px) {
