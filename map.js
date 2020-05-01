@@ -5,17 +5,22 @@ let confirmedNo = document.querySelector(".confirmed-no");
 let recoveredNo = document.querySelector(".Recovered-no");
 let deceasedNo = document.querySelector(".Deceased-no");
 let stateName = document.querySelector(".state-name");
+let zero = '0'
 async function getData() {
-  // const response = await fetch("corona.json");
-  const response = await fetch(url);
+  const response = await fetch("corona.json");
+  // const response = await fetch(url);
   const data = await response.json();
   let regional = data.data.regional;
   
   for(var i=0;i<svg.length;i++){
       svg[i].addEventListener("click", (e) => {
         let target = e.target.classList.value;
+        stateName.innerHTML = target;
+        confirmedNo.innerHTML =zero;
+        recoveredNo.innerHTML = zero;
+        deceasedNo.innerHTML = zero;
         for (var i = 0; i < regional.length; i++) {
-          if (target == regional[i].loc) {
+          if (target === regional[i].loc) {
             main1 = regional.find((item) => {
               return item.loc == target;
             });
@@ -24,9 +29,16 @@ async function getData() {
             deceasedNo.innerHTML = main1.deaths;
             stateName.innerHTML = main1.loc;
           }
+          // else{
+          //    stateName.innerHTML = target;
+          //    confirmedNo.innerHTML = zero;
+          //    recoveredNo.innerHTML = zero;
+          //    deceasedNo.innerHTML = zero;
+          // }
         }
         console.log();
       });
   }
 }
 getData();
+
