@@ -7,8 +7,8 @@ let deceasedNo = document.querySelector(".Deceased-no");
 let stateName = document.querySelector(".state-name");
 let zero = '0'
 async function getData() {
-  const response = await fetch("corona.json");
-  // const response = await fetch(url);
+  // const response = await fetch("corona.json");
+  const response = await fetch(url);
   const data = await response.json();
   let regional = data.data.regional;
   
