@@ -3,6 +3,7 @@ window.onload = function () {
   let url = "https://api.rootnet.in/covid19-in/stats/latest";
   let url2 = "https://api.rootnet.in/covid19-in/stats/testing/latest";
   let url3 = "https://api.rootnet.in/covid19-in/stats/history";
+  let url4 = "https://api.rootnet.in/covid19-in/stats/testing/history";
   let update = document.querySelector(".update");
   let confirmedNo = document.querySelector(".confirmed-no");
   let RecoveredNo = document.querySelector(".Recovered-no");
@@ -99,15 +100,22 @@ window.onload = function () {
   }
   // asynchronous function to fetch the data from api
   async function getData() {
-    // const response = await fetch('corona.json');
-    const response = await fetch(url);
+    const response = await fetch("corona.json");
+    // const response = await fetch(url);
     const data1 = await response.json();
-    // const response1 = await fetch('test.json');
-    const response1 = await fetch(url2);
+
+    const response1 = await fetch("test.json");
+    // const response1 = await fetch(url2);
     const data2 = await response1.json();
-    // const response2 = await fetch('daily.json');
-    const response2 = await fetch(url3);
+
+    const response2 = await fetch("daily.json");
+    // const response2 = await fetch(url3);
     const data3 = await response2.json();
+
+    const response3 = await fetch("dailytesting.json");
+    // const response3 = await fetch(url4);
+    const data4 = await response3.json();
+
     let update1 = data1.lastRefreshed;
     // Adding all data on site
     let newUpdate = update1.replace("T", " at ").slice(0, 19);
@@ -209,6 +217,37 @@ window.onload = function () {
     }
     var id3 = "myChartRD";
     getChartData(date, dDischarged, id3, "green", "black", "Recovered", "bar");
+
+    // Total confirmed
+    let date1 = [];
+    let testing = [];
+    let dTesting = [];
+    let dates1 = data4.data;
+    dates1.forEach((item) => {
+      date1.push(item.day);
+    });
+    dates1.forEach((item) => {
+      testing.push(item.totalSamplesTested);
+    });
+    var id1 = "myChartTestC";
+    getChartData(
+      date1,
+      testing,
+      id1,
+      "blue",
+      "black",
+      "testing : " + data2.data.totalSamplesTested,
+      "line"
+    );
+    // Total confirmed daily
+    // for (var i = 1; i < dates1.length; i++) {
+    //   let newTesting =
+    //     dates1[i].totalSamplesTested - dates1[i - 1].totalSamplesTested;
+    //   dTesting.push(newTesting);
+    // }
+    // var id1 = "myChartTestD";
+    // getChartData(date, dTesting, id1, "red", "black", "Total", "bar");
   }
+
   getData();
 };
