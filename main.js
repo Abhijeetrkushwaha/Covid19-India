@@ -100,20 +100,20 @@ window.onload = function () {
   }
   // asynchronous function to fetch the data from api
   async function getData() {
-    const response = await fetch("corona.json");
-    // const response = await fetch(url);
+    // const response = await fetch("corona.json");
+    const response = await fetch(url);
     const data1 = await response.json();
 
-    const response1 = await fetch("test.json");
-    // const response1 = await fetch(url2);
+    // const response1 = await fetch("test.json");
+    const response1 = await fetch(url2);
     const data2 = await response1.json();
 
-    const response2 = await fetch("daily.json");
-    // const response2 = await fetch(url3);
+    // const response2 = await fetch("daily.json");
+    const response2 = await fetch(url3);
     const data3 = await response2.json();
 
-    const response3 = await fetch("dailytesting.json");
-    // const response3 = await fetch(url4);
+    // const response3 = await fetch("dailytesting.json");
+    const response3 = await fetch(url4);
     const data4 = await response3.json();
 
     let update1 = data1.lastRefreshed;
